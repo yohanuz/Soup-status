@@ -1,7 +1,8 @@
 const { Client } = require('discord.js-selfbot-v13');
-const keep_alive = require('./keep_alive.js')
+const keep_alive = require('./keep_alive.js');
 
-// Replace TOKEN with your bot account's token
+const client = new Client();
+
 client.on('ready', async () => {
 
     const rpc = new Discord.RichPresence()
@@ -27,10 +28,10 @@ client.on('ready', async () => {
     console.log(`${client.user.tag} is ready!`);
 });
 
-client.login(process.env.token);
-
 client.on("error", (err) => {
   console.error(err); // or your preferred logger
 });
+
+client.login(process.env.token);
 
 client.connect(); // Get the bot to connect to Discord

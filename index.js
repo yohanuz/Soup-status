@@ -13,8 +13,8 @@ client.on('ready', async () => {
         .setName(`𝓛𝓪`)
         .setState(`.gg/chillzone`)
         .setParty({
-            max: 6000,
-            current: 5000,
+            max: 10000,
+            current: 6000,
             id: Discord.getUUID(),
         })
         .setAssetsLargeImage(`mp:attachments/1020344221460332556/1193761221783072838/Snapinsta.app_379197787_838705527971837_1873893431697852041_n_1024.jpg`)

@@ -28,10 +28,4 @@ client.on('ready', async () => {
     console.log(`${client.user.tag} is ready!`);
 });
 
-client.on("error", (err) => {
-  console.error(err); // or your preferred logger
-});
-
 client.login(process.env.token);
-
-client.connect(); // Get the bot to connect to Discord

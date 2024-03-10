@@ -2,7 +2,6 @@ const { Client } = require('discord.js-selfbot-v13');
 const keep_alive = require('./keep_alive.js')
 
 // Replace TOKEN with your bot account's token
-const client = new Discord.Client();
 client.on('ready', async () => {
 
     const rpc = new Discord.RichPresence()

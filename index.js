@@ -1,5 +1,8 @@
 const Discord = require('discord.js');
+const keep_alive = require('./keep_alive.js')
+
 const client = new Discord.Client();
+
 
 client.once('ready', () => {
     console.log('Bot is online!');

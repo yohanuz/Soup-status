@@ -4,11 +4,16 @@ const keep_alive = require('./keep_alive.js')
 
 const client = new Discord.Client();
 
-const currentStatus = 'Testing';
+let statuses = ['Status 1', 'Status 2', 'Status 3']; // Add more statuses here
+let currentStatusIndex = 0;
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity(currentStatus, { type: 'CUSTOM' });
+  setInterval(() => {
+    client.user.setActivity(statuses[currentStatusIndex], { type: 'CUSTOM' });
+    currentStatusIndex = (currentStatusIndex + 1) % statuses.length;
+    client.user.setStatus('dnd');
+  }, 3000); // Change status every 5 seconds
 });
 
 client.login(process.env.token);

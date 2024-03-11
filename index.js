@@ -4,7 +4,10 @@ const keep_alive = require('./keep_alive.js')
 
 const client = new Discord.Client();
 
-const statusMessages = ["Testing","Selfbot"];
+const currentIndex = 0;
+const statusMessages = ['Message 1', 'Message 2', 'Message 3'];
+const currentStatus = statusMessages[currentIndex];
+console.log(currentStatus);
 
 function updateStatusAndSendMessages() {
   const currentStatus = statusMessages[currentIndex];
